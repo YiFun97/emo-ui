@@ -1,16 +1,17 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './index.css'
-import {createWebHashHistory, createRouter} from 'vue-router'
-import Emo from './components/Emo.vue'
-import Emo2 from './components/Emo2.vue'
+import './index.scss'
+import { createWebHashHistory, createRouter } from 'vue-router'
+import Home from './views/Home.vue'
+import Doc from './views/Doc.vue'
+
 
 const history = createWebHashHistory()
 const router = createRouter({
     history: history,
-    routes:[
-        {path:'/', component:Emo},
-        {path:'/2', component:Emo2}
+    routes: [
+        { path: '/', component: Home },
+        { path: '/Doc', component: Doc }
     ]
 })
 const app = createApp(App)
